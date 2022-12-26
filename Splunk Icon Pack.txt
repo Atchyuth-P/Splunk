@@ -1,0 +1,5 @@
+Splunk Icon Pack
+
+https://github.com/Ziemeck/splunk-icons-draw-io
+
+https://github.com/livehybrid/splunk_drawio_icons

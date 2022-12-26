@@ -1,0 +1,22 @@
+SPlunk will listen 514 only on root user
+
+For non-root user splunk will not listen below 1024 ports
+
+we can route the 514 traffic to 5154
+
+In HF we can set the stanza accordingly
+
+Check whether the splunk is connected with port 5154
+netstat -anp | grep 514
+
+cd /opt/splunk/etc/system/local
+
+[udp://5154]
+connection_host = ip
+host = splunk-virtual-machine
+index = sophos
+sourcetype = sophos:xg:logs
+disabled = 0
+
+
+https://community.splunk.com/t5/Getting-Data-In/Can-t-add-UDP-input-because-of-error-quot-UDP-port-514-is-not/m-p/12017
